@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Syauqi Abdul Aziz — Mahasiswa Sistem Informasi | Portfolio</title>
+  <meta name="description" content="Portfolio & resume Syauqi Abdul Aziz — Mahasiswa Sistem Informasi, Universitas Komputama Cilacap. Proyek, skill, pendidikan dan kontak." />
+  <meta property="og:title" content="Syauqi Abdul Aziz — Portfolio" />
+  <meta property="og:description" content="Mahasiswa Sistem Informasi — Universitas Komputama Cilacap. Lihat proyek, skill, dan hubungi saya." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="#hero" aria-label="Home — Syauqi Abdul Aziz">
+        <span class="brand__name">Syauqi A. Aziz</span>
+        <span class="brand__role">Mahasiswa Sistem Informasi</span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav__list" id="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" class="nav__link" href="#hero">Home</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#skills">Skills</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#education">Education</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#experience">Experience</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#testimonials">Testimonials</a></li>
+          <li role="none"><a role="menuitem" class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <!-- THEME SWITCH -->
+        <div id="theme-switch" class="theme-switch" role="group" aria-label="Theme switch">
+          <button id="theme-sun" class="theme-btn" aria-pressed="false" title="Light mode" aria-label="Light mode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 11h3v2H1v-2zm10-9h2v3h-2V2zm7.04 2.05l1.79-1.79-1.79-1.79-1.79 1.79 1.79 1.79zM17 11h3v2h-3v-2zM6.76 19.16l-1.8 1.79L3.17 19.16l1.79-1.79 1.8 1.79zM12 6a6 6 0 100 12 6 6 0 000-12zm0 16h2v3h-2v-3zM19.23 19.16l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79z"/></svg>
+          </button>
+          <button id="theme-moon" class="theme-btn" aria-pressed="false" title="Dark mode" aria-label="Dark mode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.75 15.5A9 9 0 0112.5 2.25a.75.75 0 000 1.5 7.5 7.5 0 007.5 7.5.75.75 0 001.75 4.25z"/></svg>
+          </button>
+        </div>
+
+        <button id="focus-cv-toggle" class="btn btn--ghost" title="Show CV only">🎯</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="hero reveal">
+      <div class="container hero__inner">
+        <div class="hero__media">
+          <img src="assets/photo.jpg" alt="Foto Syauqi Abdul Aziz" class="hero__photo" loading="lazy" width="320" height="320" />
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__title">Syauqi Abdul Aziz</h1>
+          <p class="hero__tagline">Mahasiswa Sistem Informasi — Universitas Komputama Cilacap</p>
+          <p class="hero__summary">Saya mahasiswa Sistem Informasi dengan minat pada pengembangan web dan analisis data. Saya membangun antarmuka yang rapi, responsif, dan mudah digunakan.</p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="assets/CV_Syauqi_Abdul_Aziz.pdf" download="CV_Syauqi_Abdul_Aziz.pdf">Download CV</a>
+            <a class="btn btn--outline" href="#projects">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about reveal">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p>Saya tertarik pada solusi berbasis data dan antarmuka pengguna yang intuitif. Saat ini fokus mempelajari pengembangan aplikasi web dan manajemen informasi.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills reveal">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__grid">
+          <div class="skill">
+            <div class="skill__meta"><span>HTML &amp; CSS</span><span class="skill__level">Advanced</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__meta"><span>JavaScript</span><span class="skill__level">Intermediate</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="width:70%"></div></div>
+          </div>
+          <div class="skill-chips"><span class="chip">React (basic)</span><span class="chip">Git</span><span class="chip">SQL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION (zigzag) -->
+    <section id="education" class="section education reveal">
+      <div class="container">
+        <div class="section__header">
+          <svg class="icon icon--cert" width="42" height="42" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M19 3H5a2 2 0 0 0-2 2v12a1 1 0 0 0 1.6.8L9 15.5l4.4 2.3a1 1 0 0 0 .9 0L19.4 14.8A1 1 0 0 0 21 14V5a2 2 0 0 0-2-2zM7 7h10v2H7V7zM7 11h6v2H7v-2z"/>
+          </svg>
+          <h2 class="section__title">PENDIDIKAN</h2>
+        </div>
+
+        <div class="timeline-container" role="region" aria-label="Timeline Pendidikan">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <div class="timeline-divider timeline-divider--formal">Formal</div>
+
+          <ul class="timeline timeline--zigzag" id="timeline-list">
+            <li class="timeline__item reveal" data-type="formal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2008 — 2014</strong></div><div class="timeline__level">SD</div></div>
+                <h3 class="timeline__school">SD Negeri Karanggedang</h3>
+                <p class="timeline__location">Karanggedang, Sidareja, Cilacap</p>
+                <p class="timeline__desc">Pendidikan dasar; pengenalan mata pelajaran umum dan kegiatan ekstrakurikuler.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-type="formal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2014 — 2017</strong></div><div class="timeline__level">SMP</div></div>
+                <h3 class="timeline__school">SMP Negeri Sidareja</h3>
+                <p class="timeline__location">Sidareja, Cilacap</p>
+                <p class="timeline__desc">Penguatan kemampuan akademik dan minat awal pada teknologi informasi.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-type="formal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2017 — 2020</strong></div><div class="timeline__level">SMA / SMK</div></div>
+                <h3 class="timeline__school">SMA / SMK (Contoh)</h3>
+                <p class="timeline__location">Kabupaten Cilacap</p>
+                <p class="timeline__desc">Pengalaman proyek IT sederhana, praktik, dan kompetisi sekolah.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-type="formal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2022 — Sekarang</strong></div><div class="timeline__level">S1</div></div>
+                <h3 class="timeline__school">Universitas Komputama Cilacap</h3>
+                <p class="timeline__location">Cilacap</p>
+                <p class="timeline__desc">S1 Sistem Informasi — fokus pada basis data, pengembangan aplikasi, dan organisasi kampus.</p>
+              </div>
+            </li>
+
+            <li class="timeline__spacer" aria-hidden="true"></li>
+            <div class="timeline-divider timeline-divider--nonformal">Non Formal</div>
+
+            <li class="timeline__item reveal" data-type="nonformal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2024</strong></div><div class="timeline__level">Asisten / Proyek</div></div>
+                <h3 class="timeline__school">Asisten Penelitian / Proyek Kampus</h3>
+                <p class="timeline__location">Universitas Komputama Cilacap</p>
+                <p class="timeline__desc">Membantu pengembangan dashboard analisis data dan pemrosesan dataset.</p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal" data-type="nonformal">
+              <div class="timeline__card">
+                <div class="timeline__meta"><div class="timeline__year"><strong>2023</strong></div><div class="timeline__level">Organisasi</div></div>
+                <h3 class="timeline__school">Organisasi Mahasiswa</h3>
+                <p class="timeline__location">Universitas Komputama / Komunitas Lokal</p>
+                <p class="timeline__desc">Workshop, pengabdian masyarakat, dan kolaborasi proyek IT.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects, Experience, Testimonials unchanged -->
+    <section id="projects" class="section projects reveal">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <div class="projects__grid">
+          <article class="project-card">
+            <div class="project-card__body">
+              <h3 class="project-card__title">Project A — Sistem Informasi Akademik</h3>
+              <p class="project-card__desc">Aplikasi pengelolaan data akademik dengan fitur CRUD, autentikasi, dan laporan.</p>
+              <div class="project-card__tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+            </div>
+            <div class="project-card__footer">
+              <a class="btn btn--sm" href="#" target="_blank" rel="noopener">View</a>
+              <a class="btn btn--ghost btn--sm" href="#" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience reveal">
+      <div class="container">
+        <h2 class="section__title">Experience & Activities</h2>
+        <ul class="exp__list">
+          <li>Organisasi Mahasiswa — Anggota (2023 — sekarang). Keterangan peran.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials reveal">
+      <div class="container">
+        <h2 class="section__title">Testimonials</h2>
+        <blockquote class="testimonial">
+          <p>Contoh testimonial singkat dari dosen atau partner proyek.</p>
+          <cite>— Nama, Peran</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACT (restored & tidy: left column info + socials + map, right column form) -->
+    <section id="contact" class="section contact reveal">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+
+        <div class="contact__grid">
+          <!-- LEFT: info, socials, map -->
+          <div class="contact__left">
+            <p>Hubungi saya lewat email atau kunjungi profil sosial. Lokasi: Karanggedang, Sidareja, Cilacap.</p>
+
+            <ul class="contact__meta contact__meta-icons">
+              <li>
+                <span class="icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+                </span>
+                <a href="mailto:syaqiabdula@gmail.com">syaqiabdula@gmail.com</a>
+              </li>
+
+              <li>
+                <span class="icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.06 5.66 21.26 10.44 22v-7.01H7.9v-2.92h2.54V9.8c0-2.51 1.5-3.89 3.79-3.89 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.79l-.45 2.92h-2.34V22C18.34 21.26 22 17.06 22 12.07z"/></svg>
+                </span>
+                <a href="https://facebook.com/sy" target="_blank" rel="noopener">facebook.com/sy</a>
+              </li>
+
+              <li>
+                <span class="icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.4A4.6 4.6 0 1 0 16.6 13 4.6 4.6 0 0 0 12 8.4zm6.5-.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 10.2A1.8 1.8 0 1 1 10.2 12 1.8 1.8 0 0 1 12 10.2z"/></svg>
+                </span>
+                <a href="https://instagram.com/shyyqyy_375" target="_blank" rel="noopener">@shyyqyy_375</a>
+              </li>
+            </ul>
+
+            <div class="map-wrap" aria-hidden="false">
+              <iframe src="https://www.google.com/maps?q=Karanggedang+Sidareja+Cilacap&output=embed" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map Karanggedang Sidareja Cilacap"></iframe>
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div class="contact__right">
+            <form class="contact__form" action="mailto:syaqiabdula@gmail.com" method="GET" enctype="text/plain">
+              <label><span>Nama</span><input type="text" name="name" required /></label>
+              <label><span>Email</span><input type="email" name="email" required /></label>
+              <label><span>Pesan</span><textarea name="message" rows="6" required></textarea></label>
+              <div class="form__actions"><button type="submit" class="btn btn--primary">Kirim</button><button type="reset" class="btn btn--ghost">Reset</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Syauqi Abdul Aziz — Mahasiswa Sistem Informasi.</p>
+      <nav aria-label="Footer">
+        <a href="#hero">Top</a>
+        <a href="assets/CV_Syauqi_Abdul_Aziz.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="print-fab"><button id="print-btn" class="btn" title="Print resume">🖨️ Print</button></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
