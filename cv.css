@@ -1,187 +1,158 @@
-/* ================================
-   CV STYLE – MIRIP GAMBAR CONTOH
-   Sidebar navy, foto bulat,
-   heading bold, layout bersih
-================================ */
-
-/* --- Variables overriding --- */
-:root {
-  --sidebar-bg: #1c2331;      /* navy gelap */
-  --sidebar-text: #ffffff;
-  --sidebar-muted: #bfc6d1;
-
-  --main-bg: #ffffff;
-  --main-text: #111;
-  --accent: #000;            /* heading hitam seperti gambar */
-
-  --font-family: "Inter", sans-serif;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
 }
 
-/* --- Container --- */
-.cv-wrap {
-  max-width: 980px;
-  margin: 28px auto;
-  display: grid;
-  grid-template-columns: 32% 1fr;
-  background: #fff;
-  border-radius: 0;
-  box-shadow: none;
+/* WRAPPER FULL */
+.cv-sheet{
+  width:100%;
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:300px 1fr; /* === LEFT (SIDEBAR) — RIGHT */
+  min-height:100vh;
+  background:#fff;
+  border:1px solid #ddd;
 }
 
-/* ============================
-   SIDEBAR AREA
-============================ */
-.cv-sidebar {
-  background: var(--sidebar-bg);
-  padding: 36px 28px;
-  color: var(--sidebar-text);
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+/* ===============================
+   LEFT SIDEBAR (GELAP + GRADIENT)
+=============================== */
+.cv-header{
+  background:linear-gradient(180deg,#1c2331 0%,#0f141d 100%);
+  color:#fff;
+  padding:40px 25px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* Foto – bulat, besar, terpusat */
-.cv-photo {
-  display: flex;
-  justify-content: center;
+/* Foto */
+.cv-photo{
+  width:170px;
+  height:170px;
+  margin-bottom:25px;
 }
-.cv-photo img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* Nama & role – center seperti contoh */
-.cv-fullname {
-  margin: 12px 0 0;
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-align: center;
-  color: #fff;
-}
-.cv-title {
-  margin: 0;
-  font-size: 1rem;
-  text-align: center;
-  color: var(--sidebar-muted);
+.cv-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Sidebar titles */
-.cv-side-title {
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  font-size: 1rem;
+/* Nama */
+.cv-name h1{
+  font-size:1.6rem;
+  font-weight:700;
+  text-align:center;
+}
+.cv-role{
+  font-size:0.95rem;
+  color:#c7ccda;
+  text-align:center;
+  margin-bottom:25px;
 }
 
-/* Contact list */
-.cv-contact {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-.cv-contact li {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: #fff;
-}
-.cv-contact .icon {
-  width: 18px;
-  color: #fff;
+/* Kontak */
+.cv-contact-row{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:0.9rem;
+  text-align:center;
 }
 
-/* Skills list – dibuat seperti bullet */
-.cv-skills,
-.cv-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 6px;
-}
-.cv-skills li::before,
-.cv-list li::before {
-  content: "• ";
-  margin-right: 4px;
-  color: #fff;
+/* ===================================
+   MAIN CONTENT (PUTIH / KANAN)
+=================================== */
+.cv-main{
+  padding:40px 45px;
+  background:#ffffff;
 }
 
-/* ============================
-   MAIN COLUMN
-============================ */
-.cv-main {
-  background: var(--main-bg);
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+/* Judul Section */
+.cv-section h2{
+  font-size:1.4rem;
+  font-weight:800;
+  margin-bottom:15px;
+  color:#000;
 }
 
-/* Section Titles — bold, all caps sedikit */
-.cv-section h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #000;
+/* Paragraf umum */
+.cv-main p{
+  color:#333;
+  line-height:1.55;
+  margin-bottom:15px;
 }
 
-/* Profile paragraph */
-.cv-summary p {
-  margin: 0;
-  line-height: 1.55;
-  font-size: 1rem;
-  color: #333;
+/* EDUCATION */
+.edu-list{
+  list-style:none;
+  display:grid;
+  gap:18px;
+}
+.edu-year{
+  font-weight:700;
+  color:#222;
+}
+.edu-body strong{
+  font-size:1rem;
+  font-weight:700;
 }
 
-/* Experience entries – simple seperti contoh */
-.cv-entry {
-  margin-bottom: 22px;
-  padding-left: 0;
-  border: none;
-  background: transparent;
-  display: block;
+/* SKILLS */
+.skill-list{
+  margin-left:20px;
+}
+.skill-list li{
+  margin-bottom:6px;
 }
 
-.cv-entry strong {
-  font-size: 1.05rem;
-  color: #000;
-  font-weight: 700;
+/* EXPERIENCE */
+.exp-list{
+  margin-left:20px;
+}
+.exp-list li{
+  margin-bottom:8px;
+  line-height:1.55;
 }
 
-.entry-meta {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 8px;
+/* CTA / FOOTER */
+.cv-cta{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+.cv-cta a{
+  color:#0A66C2;
+  text-decoration:none;
+  font-weight:600;
+}
+.cv-divider{
+  opacity:0.5;
+}
+.cv-small{
+  font-size:0.85rem;
+  color:#444;
 }
 
-/* Bullet list */
-.cv-entry ul {
-  margin: 0;
-  padding-left: 20px;
-}
-.cv-entry ul li {
-  margin-bottom: 6px;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-@media (max-width: 900px) {
-  .cv-wrap {
-    grid-template-columns: 1fr;
+/* ===============================
+   RESPONSIVE MOBILE (1 kolom)
+=============================== */
+@media(max-width:900px){
+  .cv-sheet{
+    grid-template-columns:1fr; /* collapse */
   }
-  .cv-sidebar {
-    padding: 24px;
+  .cv-header{
+    padding:30px;
   }
-  .cv-main {
-    padding: 28px;
+  .cv-main{
+    padding:25px;
   }
 }
