@@ -1,187 +1,187 @@
-/* cv.css — Modern professional CV stylesheet
-   - Two-column layout: sidebar (30%) + main (70%)
-   - Clean, high-contrast, print-friendly
-   - Typography: Inter (use link in HTML)
-   - Primary accent: #0A66C2
-   - Spacing: 20–28px
-*/
+/* ================================
+   CV STYLE – MIRIP GAMBAR CONTOH
+   Sidebar navy, foto bulat,
+   heading bold, layout bersih
+================================ */
 
-/* --- Variables --- */
-:root{
-  --bg: #ffffff;
-  --paper: #ffffff;
-  --muted-bg: #f6f8fa;
-  --text: #222222;           /* primary body text */
-  --muted: #556072;          /* secondary text */
-  --accent: #0A66C2;         /* professional blue */
-  --accent-2: #0a84d4;
-  --card-shadow: 0 10px 28px rgba(11,13,20,0.06);
-  --radius: 8px;
-  --gutter: 24px;            /* between 20-28px as requested */
-  --sidebar-percent: 30%;
-  --max-width: 980px;
-  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --base-size: 16px;
-  --line-height: 1.45;
+/* --- Variables overriding --- */
+:root {
+  --sidebar-bg: #1c2331;      /* navy gelap */
+  --sidebar-text: #ffffff;
+  --sidebar-muted: #bfc6d1;
+
+  --main-bg: #ffffff;
+  --main-text: #111;
+  --accent: #000;            /* heading hitam seperti gambar */
+
+  --font-family: "Inter", sans-serif;
 }
 
-/* --- Base reset --- */
-* { box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-html,body { height:100%; margin:0; background:var(--bg); color:var(--text); font-family:var(--font-family); font-size:var(--base-size); line-height:var(--line-height); }
-
-/* --- Outer container --- */
+/* --- Container --- */
 .cv-wrap {
-  max-width: var(--max-width);
+  max-width: 980px;
   margin: 28px auto;
-  background: var(--paper);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
   display: grid;
-  grid-template-columns: var(--sidebar-percent) 1fr;
+  grid-template-columns: 32% 1fr;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* --- Sidebar (left) --- */
-.cv-sidebar{
-  background: var(--muted-bg);
-  padding: var(--gutter);
+/* ============================
+   SIDEBAR AREA
+============================ */
+.cv-sidebar {
+  background: var(--sidebar-bg);
+  padding: 36px 28px;
+  color: var(--sidebar-text);
   display: flex;
   flex-direction: column;
-  gap: var(--gutter);
-  min-width: 220px;
+  gap: 36px;
 }
 
-/* Photo */
-.cv-photo { display:flex; justify-content:center; align-items:center; }
+/* Foto – bulat, besar, terpusat */
+.cv-photo {
+  display: flex;
+  justify-content: center;
+}
 .cv-photo img {
-  width:100%;
-  max-width:180px;
-  height:auto;
-  border-radius: 10px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(11,13,20,0.06);
+  border-radius: 50%;
   border: 4px solid #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* Sidebar sections */
-.cv-side-section { display:block; }
-.cv-side-title { margin:0 0 8px 0; font-size:0.95rem; color:var(--muted); font-weight:700; letter-spacing:0.04em; }
-
-/* Contact list (icons aligned) */
-.cv-contact { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-.cv-contact li { display:flex; gap:10px; align-items:center; color:var(--text); font-size:0.95rem; }
-.cv-contact .icon { width:20px; height:20px; display:inline-grid; place-items:center; color:var(--muted); flex:0 0 20px; }
-
-/* Skills badges */
-.cv-skills { display:flex; gap:8px; flex-wrap:wrap; }
-.cv-skill {
-  background: #fff;
-  border-radius:999px;
-  padding:6px 10px;
-  font-weight:700;
-  font-size:0.9rem;
-  color:var(--accent);
-  border: 1px solid rgba(10,102,194,0.06);
-  box-shadow: 0 6px 16px rgba(10,102,194,0.03);
+/* Nama & role – center seperti contoh */
+.cv-fullname {
+  margin: 12px 0 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+}
+.cv-title {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--sidebar-muted);
 }
 
-/* --- Main column --- */
+/* Sidebar titles */
+.cv-side-title {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Contact list */
+.cv-contact {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.cv-contact li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+}
+.cv-contact .icon {
+  width: 18px;
+  color: #fff;
+}
+
+/* Skills list – dibuat seperti bullet */
+.cv-skills,
+.cv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.cv-skills li::before,
+.cv-list li::before {
+  content: "• ";
+  margin-right: 4px;
+  color: #fff;
+}
+
+/* ============================
+   MAIN COLUMN
+============================ */
 .cv-main {
-  padding: var(--gutter);
-  display:flex;
-  flex-direction:column;
-  gap: var(--gutter);
+  background: var(--main-bg);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* Header row (name + role) */
-.cv-header-row {
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.cv-fullname { margin:0; font-size:1.6rem; font-weight:800; color:var(--text); line-height:1.05; }
-.cv-title { margin:0; color:var(--muted); font-weight:600; }
-
-/* Divider accent */
-.cv-divider {
-  height:1px;
-  background: linear-gradient(90deg, rgba(10,102,194,0.12), rgba(10,102,194,0.04));
-  border-radius:2px;
-  margin:8px 0 12px;
-}
-
-/* Section base */
-.cv-section { padding:0; }
+/* Section Titles — bold, all caps sedikit */
 .cv-section h3 {
-  margin:0 0 10px 0;
-  font-size:1.05rem;
-  color:var(--accent);
-  font-weight:700;
-  letter-spacing:0.02em;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000;
 }
 
-/* Summary card */
-.cv-summary {
-  background:var(--paper);
-  padding:16px;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(11,13,20,0.03);
+/* Profile paragraph */
+.cv-summary p {
+  margin: 0;
+  line-height: 1.55;
+  font-size: 1rem;
+  color: #333;
 }
-.cv-summary p { margin:0; color:var(--muted); font-size:0.98rem; }
 
-/* Entries (experience, education): two-column within card */
+/* Experience entries – simple seperti contoh */
 .cv-entry {
-  margin-bottom:12px;
-  padding:12px;
-  background:var(--paper);
-  border-radius: 8px;
-  display:grid;
-  grid-template-columns: 120px 1fr;
-  gap:12px;
-  align-items:start;
-  border: 1px solid rgba(0,0,0,0.03);
+  margin-bottom: 22px;
+  padding-left: 0;
+  border: none;
+  background: transparent;
+  display: block;
 }
-.cv-entry .entry-date { font-weight:700; color:var(--muted); font-size:0.92rem; }
-.cv-entry .entry-body strong { display:block; margin-bottom:6px; color:var(--text); font-weight:700; }
-.cv-entry .entry-body .entry-meta { color:var(--muted); font-size:0.92rem; margin-bottom:8px; }
 
-/* Lists for certification / bullets */
-.cv-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
-.cv-list li { padding:10px; border-radius:8px; background:var(--paper); border:1px solid rgba(0,0,0,0.03); }
+.cv-entry strong {
+  font-size: 1.05rem;
+  color: #000;
+  font-weight: 700;
+}
 
-/* Small text utilities */
-.text-muted { color:var(--muted); }
-.small { font-size:0.88rem; }
+.entry-meta {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 8px;
+}
 
-/* Links & accents */
-a { color:var(--accent); text-decoration:none; }
-a:hover { text-decoration:underline; }
+/* Bullet list */
+.cv-entry ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.cv-entry ul li {
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 0.95rem;
+}
 
-/* Responsive: collapse to single column */
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 900px) {
-  .cv-wrap { grid-template-columns: 1fr; margin:16px; border-radius:8px; }
-  .cv-sidebar { order: 2; padding:18px; }
-  .cv-main { order: 1; padding:18px; }
-  .cv-entry { grid-template-columns: 1fr; }
-  .cv-photo img { max-width:140px; }
-}
-
-/* Print-friendly settings */
-@media print {
-  :root { --card-shadow: none; }
-  html,body { background: #3ab1df; color: #000; }
-  .cv-wrap { box-shadow:none !important; border-radius:0 !important; margin:0; width:auto; max-width:none; }
-  .cv-sidebar { background: transparent !important; box-shadow:none !important; border:none; }
-  .cv-entry, .cv-summary, .cv-list { box-shadow:none !important; border:none !important; background:transparent !important; }
-  .cv-photo img { border: none; box-shadow: none; }
-  .cv-divider { background: #ddd; }
-  /* Prevent page-breaks inside important blocks */
-  .cv-entry, .cv-summary, .cv-list, .cv-section { break-inside: avoid; page-break-inside: avoid; }
-  @page { size: A4; margin: 18mm; }
-}
-
-/* Accessibility preference */
-@media (prefers-contrast: more) {
-  .cv-wrap { box-shadow:none; border:1px solid rgba(0,0,0,0.06); }
-  .cv-entry { border:1px solid rgba(0,0,0,0.09); }
+  .cv-wrap {
+    grid-template-columns: 1fr;
+  }
+  .cv-sidebar {
+    padding: 24px;
+  }
+  .cv-main {
+    padding: 28px;
+  }
 }
