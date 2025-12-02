@@ -14,8 +14,8 @@
   display:grid;
   grid-template-columns:300px 1fr; /* === LEFT (SIDEBAR) — RIGHT */
   min-height:100vh;
-  background:#fff;
-  border:1px solid #ddd;
+  background:#3e5ae8;
+  border:1px solid #d8e9f7;
 }
 
 /* ===============================
