@@ -1,0 +1,149 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== WRAPPER UTAMA 2 KOLOM ===== */
+.cv-sheet {
+  display: grid;
+  grid-template-columns: 320px 1fr;  /* KIRI = SIDEBAR | KANAN = KONTEN */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* ===== SIDEBAR ===== */
+.cv-header {
+  background: linear-gradient(160deg, #1b2537, #0f1724);
+  color: white;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* PENTING — memaksa header agar FULL di kolom kiri */
+  height: 100%;
+}
+
+/* Foto Profil */
+.cv-photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-bottom: 25px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Nama */
+.cv-name h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+.cv-role {
+  color: #cdd3e2;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Kontak */
+.cv-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ===== KONTEN KANAN ===== */
+.cv-main {
+  padding: 45px 55px;
+  background: #ffffff;
+}
+
+/* Judul section */
+.cv-section h2 {
+  font-size: 1.45rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Text umum */
+.cv-main p {
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Education */
+.edu-list {
+  list-style: none;
+  margin-top: 10px;
+}
+.edu-list li {
+  margin-bottom: 20px;
+}
+.edu-year {
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Skills */
+.skill-list {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.skill-list li {
+  margin-bottom: 6px;
+}
+
+/* Experience */
+.exp-list {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.exp-list li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.cv-cta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.cv-cta a {
+  color: #0A66C2;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cv-small {
+  color: #444;
+  font-size: 0.88rem;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 900px) {
+
+  .cv-sheet {
+    grid-template-columns: 1fr;  /* Jadi satu kolom */
+  }
+
+  .cv-header {
+    height: auto;
+    padding: 30px;
+  }
+
+  .cv-main {
+    padding: 25px;
+  }
+}
