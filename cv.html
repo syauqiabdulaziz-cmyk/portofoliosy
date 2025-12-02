@@ -1,162 +1,106 @@
-/* ============================
-   GLOBAL RESET
-============================ */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Inter", sans-serif;
-}
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Syauqi Abdul Aziz</title>
+  <meta name="description" content="Curriculum Vitae Syauqi Abdul Aziz — Mahasiswa Sistem Informasi" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+  <div class="cv-sheet">
+    <header class="cv-header">
+      <div class="cv-photo">
+        <img src="img/ssyprofi.jpg" alt="Foto Syauqi Abdul Aziz" />
+      </div>
+      <div class="cv-name">
+        <h1>I’m Syauqi Abdul Aziz</h1>
+        <p class="cv-role">Mahasiswa — Sistem Informasi</p>
+        <div class="cv-contact-row">
+          <span class="cv-contact"><strong>Email:</strong> syaqiabdula@gmail.com</span>
+          <span class="cv-contact"><strong>Phone:</strong> +62 857-0057-4649</span>
+        </div>
+      </div>
+    </header>
 
-/* ============================
-   WRAPPER
-============================ */
-.cv-wrap{
-  width:100%;
-  max-width:900px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns: 300px 1fr;
-  min-height:100vh;
-  background:#fff;
-}
+    <main class="cv-main">
+      <section class="cv-section cv-summary">
+        <h2>Ringkasan</h2>
+        <p>Saya mahasiswa Sistem Informasi yang fokus pada pengembangan web, analisis data, dan desain antarmuka pengguna. Memiliki pengalaman proyek kampus dalam pembuatan dashboard dan aplikasi informasi.</p>
+      </section>
 
-/* ============================
-   SIDEBAR (SAMA PERSIS GAMBAR)
-============================ */
-.cv-sidebar{
-  background:#1b2430;          /* NAVY GELAP SAMA */
-  color:#fff;
-  padding:40px 30px;
-}
+      <section class="cv-section cv-education">
+        <h2>Pendidikan</h2>
+        <ol class="edu-list">
+          <li>
+            <span class="edu-year">2008 — 2014</span>
+            <div class="edu-body">
+              <strong>SD Negeri Karanggedang</strong>
+              <div class="edu-meta">Karanggedang, Sidareja, Cilacap</div>
+            </div>
+          </li>
+          <li>
+            <span class="edu-year">2014 — 2017</span>
+            <div class="edu-body">
+              <strong>SMP Negeri Sidareja</strong>
+              <div class="edu-meta">Sidareja, Cilacap</div>
+            </div>
+          </li>
+          <li>
+            <span class="edu-year">2017 — 2020</span>
+            <div class="edu-body">
+              <strong>SMA / SMK (Contoh)</strong>
+              <div class="edu-meta">Kabupaten Cilacap</div>
+            </div>
+          </li>
+          <li>
+            <span class="edu-year">2022 — Sekarang</span>
+            <div class="edu-body">
+              <strong>Universitas Komputama Cilacap — S1 Sistem Informasi</strong>
+              <div class="edu-meta">Cilacap — fokus basis data, pengembangan aplikasi</div>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-/* foto bulat */
-.cv-photo{
-  text-align:center;
-  margin-bottom:28px;
-}
-.cv-photo img{
-  width:170px;
-  height:170px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid #fff;
-}
+      <section class="cv-section cv-skills">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li>HTML &amp; CSS — Advanced</li>
+          <li>JavaScript — Intermediate</li>
+          <li>SQL / Data — Intermediate</li>
+          <li>React (basic), Git, Figma</li>
+        </ul>
+      </section>
 
-/* Nama & role – center */
-.cv-fullname{
-  font-size:1.8rem;
-  font-weight:700;
-  text-align:center;
-  margin-top:10px;
-  color:#fff;
-}
-.cv-title{
-  text-align:center;
-  font-size:1rem;
-  color:#ccd2dd;
-  margin-bottom:35px;
-}
+      <section class="cv-section cv-experience">
+        <h2>Pengalaman</h2>
+        <ul class="exp-list">
+          <li><strong>Asisten Penelitian / Proyek Kampus (2024)</strong> — Kontribusi ke dashboard analisis data.</li>
+          <li><strong>Organisasi Mahasiswa (2023)</strong> — Pelaksanaan workshop & pengabdian masyarakat.</li>
+        </ul>
+      </section>
 
-/* Title sidebar */
-.cv-side-title{
-  font-size:1.1rem;
-  font-weight:700;
-  margin-bottom:10px;
-  margin-top:25px;
-  letter-spacing:0.5px;
-  color:#fff;
-}
+      <section class="cv-section cv-footer-notes">
+        <div class="cv-cta">
+          <a href="mailto:syaqiabdula@gmail.com">Hubungi melalui email</a>
+          <span class="cv-divider">•</span>
+          <a href="https://github.com/syauqiabdulaziz-cmyk" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="cv-small">Generated for print: gunakan "Save as PDF" di dialog cetak untuk menyimpan CV sebagai PDF yang rapi.</p>
+      </section>
+    </main>
+  </div>
 
-/* list kontak */
-.cv-contact{
-  list-style:none;
-  display:grid;
-  gap:10px;
-}
-.cv-contact li{
-  font-size:0.95rem;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.cv-contact .icon{
-  width:16px;
-  opacity:0.85;
-}
-
-/* skills / languages / hobbies bullet style */
-.cv-skills,
-.cv-langs,
-.cv-hobbies{
-  list-style:none;
-  display:grid;
-  gap:5px;
-}
-.cv-skills li::before,
-.cv-langs li::before,
-.cv-hobbies li::before{
-  content:"• ";
-  color:#fff;
-  margin-right:4px;
-}
-
-
-/* ============================
-   MAIN CONTENT (KANAN)
-============================ */
-.cv-main{
-  padding:50px 40px;
-}
-
-/* Heading besar seperti gambar */
-.cv-section h3{
-  font-size:1.4rem;
-  font-weight:800;
-  margin-bottom:15px;
-  color:#000;
-}
-
-/* paragraf profile */
-.cv-summary p{
-  font-size:1rem;
-  color:#2b2b2b;
-  line-height:1.55;
-}
-
-/* Job Title */
-.cv-entry strong{
-  font-size:1.1rem;
-  font-weight:700;
-  color:#000;
-}
-
-/* Meta (company – year) */
-.entry-meta{
-  font-size:0.95rem;
-  font-weight:600;
-  color:#444;
-  margin-bottom:8px;
-}
-
-/* List bullet */
-.cv-entry ul{
-  margin-left:20px;
-}
-.cv-entry ul li{
-  margin-bottom:6px;
-  font-size:1rem;
-  color:#333;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-@media(max-width:900px){
-  .cv-wrap{
-    grid-template-columns:1fr;
-  }
-  .cv-sidebar{
-    text-align:center;
-  }
-}
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.print();
+      }, 450);
+    });
+  </script>
+</body>
+</html>
