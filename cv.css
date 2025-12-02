@@ -169,7 +169,7 @@ a:hover { text-decoration:underline; }
 /* Print-friendly settings */
 @media print {
   :root { --card-shadow: none; }
-  html,body { background: #fff; color: #000; }
+  html,body { background: #3ab1df; color: #000; }
   .cv-wrap { box-shadow:none !important; border-radius:0 !important; margin:0; width:auto; max-width:none; }
   .cv-sidebar { background: transparent !important; box-shadow:none !important; border:none; }
   .cv-entry, .cv-summary, .cv-list { box-shadow:none !important; border:none !important; background:transparent !important; }
